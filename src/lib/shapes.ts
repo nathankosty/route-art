@@ -1,6 +1,6 @@
 // Each shape is a list of [x, y] KEY VERTICES in normalized 0..1 space.
 // IMPORTANT: Only include corner points and curve control points.
-// Do NOT interpolate along straight lines — OSRM handles path-finding between points.
+// Do NOT interpolate along straight lines. OSRM handles path-finding between points.
 // For curves, sample at wide intervals (~30-45 degrees).
 // y=0 is top/north, y=1 is bottom/south.
 
