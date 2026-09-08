@@ -1,6 +1,6 @@
 // Letter shapes for word mode.
 // CRITICAL: Each letter is ONLY its corner/vertex points. No intermediate interpolation.
-// OSRM finds the street path between consecutive points — we just give it the corners.
+// OSRM finds the street path between consecutive points. We just give it the corners.
 // Each letter is drawn as a single continuous stroke (pen may retrace lines).
 
 export interface Letter {
@@ -8,7 +8,7 @@ export interface Letter {
   width: number;
 }
 
-// Arc helper for curved letters (O, C, etc.) — minimal points
+// Arc helper for curved letters (O, C, etc.), minimal points
 function arc(
   cx: number, cy: number,
   rx: number, ry: number,

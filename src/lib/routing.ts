@@ -4,7 +4,7 @@
 // Design principles:
 // 1. Shapes are defined as only their corner/vertex points (no interpolation)
 // 2. Each consecutive pair of vertices gets its own OSRM routing call
-// 3. This allows backtracking and retracing streets — essential for letters and complex shapes
+// 3. This allows backtracking and retracing streets, essential for letters and complex shapes
 // 4. Shapes are scaled large enough for OSRM to find sensible street paths
 
 export interface LatLng {

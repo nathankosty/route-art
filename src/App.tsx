@@ -179,7 +179,7 @@ export default function App() {
             ))}
           </div>
           <p className="text-xs text-gray-500 mt-1.5">
-            {SIZE_PRESETS[sizeIndex].desc} across — distance depends on shape complexity
+            {SIZE_PRESETS[sizeIndex].desc} across, distance depends on shape complexity
           </p>
         </div>
 
