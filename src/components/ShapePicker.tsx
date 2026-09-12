@@ -36,7 +36,17 @@ export default function ShapePicker({ selected, onSelect, mode }: Props) {
                       : "border-gray-700 bg-gray-800 hover:border-gray-500"
                   }`}
                 >
-                  <span className="text-2xl">{shape.icon}</span>
+                  {/* Preview is the actual vertex path the route will follow */}
+                  <svg viewBox="-0.1 -0.1 1.2 1.2" className="w-8 h-8" aria-hidden="true">
+                    <polyline
+                      points={shape.points.map(([x, y]) => `${x},${y}`).join(" ")}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={0.06}
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                    />
+                  </svg>
                   <span className="text-xs text-gray-300 mt-1">{shape.name}</span>
                 </button>
               ))}

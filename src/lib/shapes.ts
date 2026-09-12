@@ -6,7 +6,6 @@
 
 export interface Shape {
   name: string;
-  icon: string;
   points: [number, number][];
   category: "basic" | "animal" | "seasonal" | "symbol";
 }
@@ -161,16 +160,16 @@ function pumpkinShape(): [number, number][] {
 }
 
 export const shapes: Shape[] = [
-  { name: "Heart", icon: "\u2764\uFE0F", points: heartShape(), category: "basic" },
-  { name: "Star", icon: "\u2B50", points: starShape(), category: "basic" },
-  { name: "Diamond", icon: "\uD83D\uDC8E", points: diamondShape(), category: "basic" },
-  { name: "Arrow", icon: "\u27A1\uFE0F", points: arrowShape(), category: "basic" },
-  { name: "Lightning", icon: "\u26A1", points: lightningShape(), category: "basic" },
-  { name: "Smiley", icon: "\uD83D\uDE00", points: smileyShape(), category: "symbol" },
-  { name: "House", icon: "\uD83C\uDFE0", points: houseShape(), category: "symbol" },
-  { name: "Music Note", icon: "\uD83C\uDFB5", points: musicNoteShape(), category: "symbol" },
-  { name: "Cat", icon: "\uD83D\uDC31", points: catShape(), category: "animal" },
-  { name: "Fish", icon: "\uD83D\uDC1F", points: fishShape(), category: "animal" },
-  { name: "Tree", icon: "\uD83C\uDF84", points: treeShape(), category: "seasonal" },
-  { name: "Pumpkin", icon: "\uD83C\uDF83", points: pumpkinShape(), category: "seasonal" },
+  { name: "Heart", points: heartShape(), category: "basic" },
+  { name: "Star", points: starShape(), category: "basic" },
+  { name: "Diamond", points: diamondShape(), category: "basic" },
+  { name: "Arrow", points: arrowShape(), category: "basic" },
+  { name: "Lightning", points: lightningShape(), category: "basic" },
+  { name: "Smiley", points: smileyShape(), category: "symbol" },
+  { name: "House", points: houseShape(), category: "symbol" },
+  { name: "Music Note", points: musicNoteShape(), category: "symbol" },
+  { name: "Cat", points: catShape(), category: "animal" },
+  { name: "Fish", points: fishShape(), category: "animal" },
+  { name: "Tree", points: treeShape(), category: "seasonal" },
+  { name: "Pumpkin", points: pumpkinShape(), category: "seasonal" },
 ];

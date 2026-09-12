@@ -91,7 +91,6 @@ export default function App() {
       <div className="w-full lg:w-96 p-4 lg:p-6 flex flex-col gap-4 lg:h-screen lg:overflow-y-auto shrink-0 border-b lg:border-b-0 lg:border-r border-gray-800">
         {/* Header */}
         <div className="flex items-center gap-3">
-          <div className="text-3xl">🏃</div>
           <div>
             <h1 className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
               RouteArt
@@ -110,7 +109,7 @@ export default function App() {
 
         {center && (
           <div className="text-xs text-green-400">
-            📍 {locationName}
+            {locationName}
           </div>
         )}
 
@@ -128,7 +127,7 @@ export default function App() {
                     : "bg-gray-800 text-gray-400 hover:bg-gray-700"
                 }`}
               >
-                {m === "shape" ? "🎨 Shape" : "✏️ Word"}
+                {m === "shape" ? "Shape" : "Word"}
               </button>
             ))}
           </div>
@@ -195,7 +194,7 @@ export default function App() {
                   : "bg-gray-800 text-gray-500 hover:bg-gray-750"
               }`}
             >
-              {p === "run" ? "🏃 Run" : "🚶 Walk"}
+              {p === "run" ? "Run" : "Walk"}
             </button>
           ))}
         </div>
@@ -258,14 +257,14 @@ export default function App() {
                 onClick={() => downloadGPX(route.routeGeometry, routeName)}
                 className="flex-1 py-2 bg-green-600 hover:bg-green-500 text-white text-sm rounded-lg font-medium transition-all"
               >
-                📥 Download GPX
+                Download GPX
               </button>
               <button
                 onClick={generateRoute}
                 className="py-2 px-3 bg-gray-700 hover:bg-gray-600 text-white text-sm rounded-lg transition-all"
                 title="Regenerate route"
               >
-                🔄
+                Regenerate
               </button>
             </div>
             <p className="text-xs text-gray-500">
@@ -277,8 +276,8 @@ export default function App() {
         {/* Tips */}
         {!route && !loading && (
           <div className="mt-auto text-xs text-gray-600 space-y-1">
-            <p>💡 Dense city grids (NYC, Chicago) work best for shape fidelity.</p>
-            <p>💡 Larger sizes give more room for the shape to breathe on the streets.</p>
+            <p>Dense city grids (NYC, Chicago) work best for shape fidelity.</p>
+            <p>Larger sizes give more room for the shape to breathe on the streets.</p>
           </div>
         )}
       </div>
